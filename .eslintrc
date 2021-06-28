@@ -1,6 +1,7 @@
 {
   "extends": [
     "airbnb-base",
+    ".eslintrc-sails"
   ],
 
   "plugins": [
