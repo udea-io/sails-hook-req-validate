@@ -113,12 +113,12 @@ module.exports = {
   },
 
   errorWithNoResponse: function(req, res){
-    var params = req.validate('id', {sendResponse: false});
+    var params = req.validate({ 'id': 'required' }, {sendResponse: false});
     if(params) return res.ok(); else return res.badRequest('Custom error text');
   },
 
   errorWithNoResponseAsync: function(req, res){
-    req.validate('id', {sendResponse: false}, function(err, params){
+    req.validate({ 'id': 'required' }, {sendResponse: false}, function(err, params){
       if(err) return res.badRequest('Custom error text');
       return res.ok();
     });
