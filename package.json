@@ -48,6 +48,7 @@
   },
   "homepage": "https://github.com/JohnKimDev/sails-hook-req-validate",
   "scripts": {
+    "pretest": "touch config/local.js",
     "test": "mocha"
   }
 }
