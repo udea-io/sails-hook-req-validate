@@ -9,8 +9,8 @@ describe('09 Feature Test', function () {
       // string: 1,
       nullable: '',
       custom1: 1, // val > 0, sleep 1000ms
-      // custom2: 2, // val > 1
-      custom2: 1, // val > 1
+      custom2: 2, // val > 1
+      // custom2: 1, // val > 1
       custom3: 2, // val > 1, to string
     }, function (err, res) {
       if (err) return done(err);

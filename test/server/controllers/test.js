@@ -18,7 +18,7 @@ module.exports = async function (req, res) {
     ],
     custom2: [
       'required',
-      'string',
+      'number',
       {
         validator: (val) => {
           return val > 1;
