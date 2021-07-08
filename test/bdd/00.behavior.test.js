@@ -452,7 +452,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return ok with empty message async', function (done) {
+  it.skip('should return ok with empty message async', function (done) {
     var params = {};
     sails.request({
       url: '/optional-parameter-by-type-async',
@@ -466,7 +466,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return ok with name equal JOSEBA in upperCase', function (done) {
+  it.skip('should return ok with name equal JOSEBA in upperCase', function (done) {
     var params = { name: 'joseba' };
     sails.request({
       url: '/optional-parameter-by-type',
@@ -479,7 +479,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return ok with name equal JOSEBA in upperCase async', function (done) {
+  it.skip('should return ok with name equal JOSEBA in upperCase async', function (done) {
     var params = { name: 'joseba' };
     sails.request({
       url: '/optional-parameter-by-type-async',
@@ -492,7 +492,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return 400 error with the number as a string', function (done) {
+  it.skip('should return 400 error with the number as a string', function (done) {
     var params = { name: 123 };
     sails.request({
       url: '/optional-parameter-by-type',
@@ -506,7 +506,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return 400 error with the number as a string async', function (done) {
+  it.skip('should return 400 error with the number as a string async', function (done) {
     var params = { name: 123 };
     sails.request({
       url: '/optional-parameter-by-type-async',
@@ -520,7 +520,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return all the params', function (done) {
+  it.skip('should return all the params', function (done) {
     var params = {
       id: 1,
       name: 'joseba',
@@ -545,7 +545,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return all the params async', function (done) {
+  it.skip('should return all the params async', function (done) {
     var params = {
       id: 1,
       name: 'joseba',
@@ -570,7 +570,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return 200 ok with no age, surname and name', function (done) {
+  it.skip('should return 200 ok with no age, surname and name', function (done) {
     var params = {
       id: 1,
       height: 1.88
@@ -589,7 +589,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return 200 ok with no age, surname and name async', function (done) {
+  it.skip('should return 200 ok with no age, surname and name async', function (done) {
     var params = {
       id: 1,
       height: 1.88
@@ -608,7 +608,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return 200 ok with no age and surname', function (done) {
+  it.skip('should return 200 ok with no age and surname', function (done) {
     var params = {
       id: 1,
       height: 1.88,
@@ -629,7 +629,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return 200 ok with no age and surname async', function (done) {
+  it.skip('should return 200 ok with no age and surname async', function (done) {
     var params = {
       id: 1,
       height: 1.88,
@@ -650,7 +650,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return 400 error age and height aren"t valid type', function (done) {
+  it.skip('should return 400 error age and height aren"t valid type', function (done) {
     var params = {
       id: 1,
       height: '1,88',
@@ -670,7 +670,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return 400 error age and height aren"t valid type async', function (done) {
+  it.skip('should return 400 error age and height aren"t valid type async', function (done) {
     var params = {
       id: 1,
       height: '1,88',
@@ -690,7 +690,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return 400 id required and not valid age type', function (done) {
+  it.skip('should return 400 id required and not valid age type', function (done) {
     var params = {
       height: 1.88,
       name: 'joseba',
@@ -709,7 +709,7 @@ describe('00 BehaviorController Test ::', function () {
     });
   });
 
-  it('should return 400 id required and not valid age type async', function (done) {
+  it.skip('should return 400 id required and not valid age type async', function (done) {
     var params = {
       height: 1.88,
       name: 'joseba',

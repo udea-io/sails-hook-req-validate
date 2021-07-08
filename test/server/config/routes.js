@@ -1,7 +1,6 @@
 // Routes for testing
 
 var controllers = require('../controllers');
-
 module.exports = {
 
   /* Behavior routes */
@@ -50,6 +49,9 @@ module.exports = {
   'post /alpha': controllers.alpha,
 
   /* Numeric */
-  'post /numeric': controllers.numeric
+  'post /numeric': controllers.numeric,
+
+  /* Test */
+  'post /test': controllers.test,
 
 };
