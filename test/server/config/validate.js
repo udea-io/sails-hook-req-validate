@@ -108,7 +108,7 @@ module.exports.validate = {
   //   return `Invalid input type, it should be one of the following types; ${orTypeMessages}.`;
   // }
 
-  autoThrowError: true,
+  autoThrowError: false,
   types: {
     // 'string': {
       // method: (val) => _.isString(val),
