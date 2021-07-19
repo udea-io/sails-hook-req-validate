@@ -39,10 +39,22 @@ module.exports = async function (req, res) {
     ],
   };
 
-  const result = await req.validate(filter, {
+  // const result = await req.validate(filter, {
+    // sendResponse: false,
+  // }, function (err, params) {
+    // if (err) return res.badRequest(err);
+    // return res.ok(params);
+  // });
+
+  const result = await req.validate({
+    boolean: 'boolean',
+    number: 'number',
+    float: 'float',
+    int: 'int',
+  }, {
     sendResponse: false,
-  }, function (err, params) {
-    if (err) return res.badRequest(err);
-    return res.ok(params);
+    autoThrowError: false,
   });
+
+  res.ok(result);
 };
