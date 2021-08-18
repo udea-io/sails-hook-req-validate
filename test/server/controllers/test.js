@@ -18,7 +18,6 @@ module.exports = async function (req, res) {
     ],
     custom2: [
       'required',
-      'number',
       {
         validator: (val) => {
           return val > 1;
@@ -37,20 +36,27 @@ module.exports = async function (req, res) {
         },
       },
     ],
+    object: [
+      'required',
+      'object',
+      {
+        properties: {
+          a: 'required|number',
+          b: 'required|string',
+        },
+      },
+    ],
   };
-
-  // const result = await req.validate(filter, {
-    // sendResponse: false,
-  // }, function (err, params) {
-    // if (err) return res.badRequest(err);
-    // return res.ok(params);
-  // });
 
   const result = await req.validate({
     boolean: 'boolean',
     number: 'number',
     float: 'float',
     int: 'int',
+    custom1: filter.custom1,
+    custom2: filter.custom2,
+    custom3: filter.custom3,
+    object: filter.object,
   }, {
     sendResponse: false,
     autoThrowError: false,
