@@ -30,4 +30,25 @@ describe.only('09 Feature Test', function () {
       return done();
     });
   });
+
+  it('new struct', function (done) {
+    sails.request({
+      url: '/struct',
+      method: 'post',
+    }, {
+      string: 'string',
+      // string: 1,
+      // array: ['array'],
+      array: '["a"]',
+      object: {
+        platform: 'A',
+      },
+    }, function (err, res) {
+      if (err) return done(err);
+      res.statusCode.should.be.equal(200);
+      console.log(res.body);
+
+      return done();
+    });
+  });
 });
