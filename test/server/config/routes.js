@@ -49,9 +49,9 @@ module.exports = {
   'post /alpha': controllers.alpha,
 
   /* Numeric */
-  'post /numeric': controllers.numeric,
+  // 'post /numeric': controllers.numeric,
 
   /* Test */
-  'post /test': controllers.test,
-
+  'post /test': controllers.test.validate,
+  'post /struct': controllers.test.struct,
 };
