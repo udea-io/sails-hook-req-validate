@@ -18,6 +18,7 @@ describe.only('09 Feature Test', function () {
     }, function (err, res) {
       if (err) return done(err);
       res.statusCode.should.be.equal(200);
+      console.log(typeof res.body);
       console.log(res.body);
       (typeof res.body.boolean).should.be.equal('boolean');
       (typeof res.body.number).should.be.equal('number');
@@ -36,8 +37,8 @@ describe.only('09 Feature Test', function () {
       url: '/struct',
       method: 'post',
     }, {
-      string: 'string',
-      // string: 1,
+      // string: 'string',
+      string: 1,
       // array: ['array'],
       array: '["a"]',
       object: {
