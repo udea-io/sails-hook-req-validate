@@ -2,7 +2,7 @@
  * Sails-Hook-Req-Validate Global Configuration
  *
  * For more information on the settings in this file, see:
- * https://github.com/JohnKimDev/sails-hook-req-validate/blob/master/readme.md
+ * https://github.com/udea-io/sails-hook-req-validate/blob/master/readme.md
  **/
 
 module.exports.validate = {
@@ -13,6 +13,8 @@ module.exports.validate = {
   * By Default, `sendResponse` is enabled.
   ***************************************************************************/
   // sendResponse: true,
+  // autoThrowError: false,
+  // passedRequest: true,
 
   /***************************************************************************
   * After the validation check, the program returns data as object or you
@@ -108,16 +110,15 @@ module.exports.validate = {
   //   return `Invalid input type, it should be one of the following types; ${orTypeMessages}.`;
   // }
 
-  autoThrowError: true,
-  types: {
+  // types: {
     // 'string': {
       // method: (val) => _.isString(val),
       // message: 'string'
     // },
-  },
-  converters: {
+  // },
+  // converters: {
     // 'uppercase': {
       // converter: (val) => val.toString().toUpperCase()
     // }
-  },
+  // },
 };
