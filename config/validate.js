@@ -13,6 +13,8 @@ module.exports.validate = {
   * By Default, `sendResponse` is enabled.
   ***************************************************************************/
   // sendResponse: true,
+
+  // responseList: [],
   // autoThrowError: false,
   // passedRequest: true,
 
