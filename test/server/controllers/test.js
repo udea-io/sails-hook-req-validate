@@ -57,10 +57,10 @@ module.exports = {
       object: filter.object,
     }, {
       sendResponse: false,
-      autoThrowError: false,
+      autoThrowError: true,
     });
 
-    res.ok(result);
+    res.ok(result.request);
   },
 
   struct: async function (req, res) {
@@ -97,7 +97,7 @@ module.exports = {
 
     const result = await req.validate(filter, {
       sendResponse: false,
-      autoThrowError: false,
+      autoThrowError: true,
     });
 
     res.ok(result);
